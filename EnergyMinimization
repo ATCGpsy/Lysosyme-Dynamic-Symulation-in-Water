@@ -1,0 +1,4 @@
+#Energy minimization in box
+gmx grompp -f inputs/minim.mdp -c 1AKI_solv_ions.gro -p topol.top -o em.tpr
+   gmx mdrun -v -deffnm em
+     gmx energy -f em.edr -o potential.xvg
