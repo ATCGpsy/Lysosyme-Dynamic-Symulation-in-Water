@@ -1,0 +1,6 @@
+#Strip out the crystal waters
+   grep -v HOH 1aki.pdb > 1AKI_clean.pdb
+
+   #Converting PDB format to gmx then choose a force field
+      gmx pdb2gmx -f 1AKI_clean.pdb -o 1AKI_processed.gro -water tip3p 
+
